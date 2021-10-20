@@ -712,7 +712,7 @@ namespace overlay {
                 source_collection->removeElementAt(i);
               }
           }
-        else if (source_collection->getTypeName() == LCIO::SIMTRACKERHIT) {
+        /*else if (source_collection->getTypeName() == LCIO::SIMTRACKERHIT) {
           //If truth is removed in the overlay, we need to remove the pointer since it will become invalid
           if (not _mergeMCParticles) {
             for (int k = 0; k < number_of_elements; ++k) 
@@ -771,7 +771,7 @@ namespace overlay {
                   }
               }
           }
-        }
+        }*/
         else if (source_collection->getTypeName() == LCIO::SIMCALORIMETERHIT)
           {
             // create a map of dest Collection
