@@ -708,7 +708,10 @@ namespace overlay {
               {
                 MCParticleImpl *MC_Part = static_cast<MCParticleImpl*>(source_collection->getElementAt(i));
                 MC_Part->setTime(MC_Part->getTime() + time_offset);
-                dest_collection->addElement(MC_Part);
+                if(MC_Part->getEnergy() > 10)//E>10MeV cut if units of energy is MeV **modified Jan10,2022.
+                {
+                  dest_collection->addElement(MC_Part);
+                }
                 source_collection->removeElementAt(i);
               }
           }
